@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0f0f0f;
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1503264116251-35a269479413') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.content {
+  position: relative;
+  z-index: 2;
+}
+.content h1 {
+  font-size: 3em;
+  color: #fff;
+}
+.content span {
+  color: #00ffc8;
+}
+.content p {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #ccc;
+}
+.profile-img {
+  margin-top: 20px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #00ffc8;
+  box-shadow: 0 0 20px #00ffc8;
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.section {
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+h2 {
+  font-size: 2em;
+  color: #00ffc8;
+  margin-bottom: 20px;
+}
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.skill-card {
+  flex: 1 1 40%;
+  background: #1a1a1a;
+  padding: 20px;
+  border-left: 4px solid #00ffc8;
+  transition: transform 0.3s ease;
+}
+.skill-card:hover {
+  transform: scale(1.05);
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #121212;
+  color: #888;
+}
